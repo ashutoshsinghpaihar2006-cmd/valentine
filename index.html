@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Valentine’s Day ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        color: white;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin-top: 60px;
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 20px auto;
+        line-height: 1.6;
+    }
+
+    .heart {
+        font-size: 5rem;
+        animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+    }
+
+    button {
+        background: white;
+        color: #ff4f7b;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-top: 30px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ffe1ea;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .message {
+        margin-top: 30px;
+        font-size: 1.4rem;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Floating hearts */
+    .floating-heart {
+        position: absolute;
+        color: rgba(255,255,255,0.8);
+        font-size: 20px;
+        animation: floatUp 6s linear infinite;
+    }
+
+    @keyframes floatUp {
+        0% {
+            transform: translateY(100vh);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-10vh);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Happy Valentine’s Day 💕</h1>
+
+<div class="heart">❤️</div>
+
+<p>
+    To the most beautiful person in my life,<br>
+    <!-- CHANGE HER NAME BELOW -->
+    <strong>MY LOVE</strong>
+</p>
+
+<p>
+    <!-- CHANGE THIS MESSAGE -->
+    Every moment with you feels magical.  
+    You make my world brighter, my days happier,  
+    and my heart fuller than I ever imagined.
+</p>
+
+<button onclick="showMessage()">Click for a Surprise 💌</button>
+
+<div id="surprise" class="message hidden">
+    I choose you.  
+    Today, tomorrow, and always ❤️  
+    Will you be my Valentine? 🌹
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("surprise").classList.remove("hidden");
+    }
+
+    // Floating hearts animation
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("floating-heart");
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+
+    setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
