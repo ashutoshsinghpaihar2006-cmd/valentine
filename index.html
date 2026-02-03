@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Amratansh ❤️</title>
+<title>For You 🤍</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -15,207 +15,186 @@
 body {
     margin: 0;
     height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #ff9a9e, #fad0c4);
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(180deg, #fde2e4, #fadadd);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-/* Glass Card */
+/* Card */
 .card {
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    padding: 40px 30px;
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 35px 30px;
     width: 90%;
     max-width: 420px;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-    animation: pop 1.2s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    animation: fadeUp 1.5s ease;
 }
 
-@keyframes pop {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     margin-bottom: 10px;
-}
-
-.name {
-    font-size: 2.6rem;
-    font-weight: 700;
-    color: #fff;
-    text-shadow: 0 0 15px rgba(255,255,255,0.7);
+    color: #444;
 }
 
 p {
     font-size: 1.1rem;
-    margin: 15px 0;
-    line-height: 1.6;
+    line-height: 1.7;
+    color: #555;
+    margin: 12px 0;
 }
 
-.heart {
-    font-size: 4.5rem;
-    animation: beat 1s infinite;
+.soft-heart {
+    font-size: 3.8rem;
+    animation: pulse 2s infinite;
 }
 
-@keyframes beat {
+@keyframes pulse {
     0%,100% { transform: scale(1); }
-    50% { transform: scale(1.25); }
+    50% { transform: scale(1.12); }
 }
 
 /* Buttons */
-.buttons {
-    margin-top: 30px;
-    position: relative;
-    height: 120px;
-}
-
 button {
     border: none;
-    padding: 14px 28px;
-    font-size: 1.1rem;
     border-radius: 30px;
+    padding: 14px 26px;
+    font-size: 1.05rem;
     cursor: pointer;
+    margin: 10px;
     transition: 0.3s;
-    position: absolute;
 }
 
-#yesBtn {
-    background: #ff4f7b;
+#hugBtn {
+    background: #ff9aa2;
     color: white;
-    left: 50%;
-    transform: translateX(-120%);
-    box-shadow: 0 10px 25px rgba(255,79,123,0.5);
+    box-shadow: 0 10px 20px rgba(255,154,162,0.4);
 }
 
-#yesBtn:hover {
-    transform: translateX(-120%) scale(1.1);
+#hugBtn:hover {
+    transform: scale(1.08);
 }
 
-#noBtn {
+#comfortBtn {
     background: white;
-    color: #ff4f7b;
-    left: 50%;
-    transform: translateX(20%);
+    color: #ff7a8a;
 }
 
-/* Final message */
-#finalMessage {
-    display: none;
-    animation: fadeIn 1.5s ease forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-/* Floating hearts */
-.floating {
+/* Floating petals */
+.petal {
     position: absolute;
     font-size: 18px;
-    animation: floatUp linear infinite;
-    opacity: 0.8;
+    animation: float linear infinite;
+    opacity: 0.7;
 }
 
-@keyframes floatUp {
+@keyframes float {
     from {
         transform: translateY(100vh);
-        opacity: 1;
+        opacity: 0.8;
     }
     to {
         transform: translateY(-10vh);
         opacity: 0;
     }
 }
+
+/* Hidden message */
+#message {
+    margin-top: 20px;
+    font-size: 1.15rem;
+    color: #444;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Breathing */
+.breathe {
+    margin-top: 20px;
+    font-size: 1rem;
+    opacity: 0.7;
+}
 </style>
 </head>
 
 <body>
 
-<div class="card" id="card">
-    <h1>Hey</h1>
-    <div class="name">Amratansh 💕</div>
-
-    <div class="heart">❤️</div>
+<div class="card">
+    <div class="soft-heart">🤍</div>
+    <h1>Hey love</h1>
 
     <p>
-        I’ve been meaning to ask you something very special…  
-        Every moment with you feels warmer, happier, and brighter.
+        I know today might feel a little heavier than usual.  
+        Your body is working hard, and it’s okay to feel tired, moody,
+        or just *not okay*.
     </p>
 
     <p>
-        So here it is —
+        You don’t have to be strong right now.  
+        You’re already enough 🤍
     </p>
 
-    <h2>Will you be my Valentine? 🌹</h2>
+    <button id="hugBtn" onclick="hug()">🤗 Virtual Hug</button>
+    <button id="comfortBtn" onclick="comfort()">💌 Gentle Words</button>
 
-    <div class="buttons">
-        <button id="yesBtn" onclick="sayYes()">YES 💖</button>
-        <button id="noBtn" onmouseover="runAway()" onclick="runAway()">NO 🙈</button>
+    <div id="message"></div>
+
+    <div class="breathe">
+        Breathe in… breathe out… you’re safe 🌙
     </div>
 </div>
 
-<div class="card" id="finalMessage">
-    <h1>YAYYYY!! 🎉💖</h1>
-    <p>
-        I knew it 😌  
-        Thank you for choosing me, Amratansh.
-    </p>
-    <p>
-        This just made my heart the happiest ever ❤️  
-        Happy Valentine’s Day 🌹
-    </p>
-    <div class="heart">💘</div>
-</div>
-
 <script>
-const noBtn = document.getElementById("noBtn");
 const messages = [
-    "Are you sure? 🥺",
-    "Think again 😳",
-    "Pleaseee 🥹",
-    "My heart will break 💔",
-    "Last chance 😭",
-    "You can’t escape love 😈❤️"
+    "I’m really proud of you for getting through today 🤍",
+    "You’re allowed to rest. The world can wait 🕊️",
+    "You are loved, deeply and gently 💗",
+    "Even on hard days, you’re still you — and that’s beautiful 🌸",
+    "If I were there, I’d bring you comfort, warmth, and snacks 🍫",
+    "You don’t need to explain how you feel. I understand 🤍"
 ];
 
-let msgIndex = 0;
+let index = 0;
 
-function runAway() {
-    const x = Math.random() * 250 - 125;
-    const y = Math.random() * 100 - 50;
-
-    noBtn.style.transform = `translate(${x}px, ${y}px)`;
-    noBtn.innerText = messages[msgIndex % messages.length];
-    msgIndex++;
+function hug() {
+    document.getElementById("message").innerText =
+        "I’m holding you tight right now 🤍 You’re not alone.";
 }
 
-function sayYes() {
-    document.getElementById("card").style.display = "none";
-    document.getElementById("finalMessage").style.display = "block";
+function comfort() {
+    document.getElementById("message").innerText =
+        messages[index % messages.length];
+    index++;
 }
 
-/* Floating hearts generator */
-function createHeart() {
-    const heart = document.createElement("div");
-    heart.classList.add("floating");
-    heart.innerHTML = Math.random() > 0.5 ? "❤️" : "💖";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 12 + "px";
-    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
-    document.body.appendChild(heart);
+/* Floating petals */
+function createPetal() {
+    const petal = document.createElement("div");
+    petal.classList.add("petal");
+    petal.innerHTML = "🌸";
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.fontSize = Math.random() * 16 + 14 + "px";
+    petal.style.animationDuration = Math.random() * 4 + 4 + "s";
+    document.body.appendChild(petal);
 
-    setTimeout(() => heart.remove(), 6000);
+    setTimeout(() => petal.remove(), 7000);
 }
 
-setInterval(createHeart, 300);
+setInterval(createPetal, 500);
 </script>
 
 </body>
